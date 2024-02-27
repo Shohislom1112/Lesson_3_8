@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Header, MySidebar } from "./components/index";
+import { Header, Sidebar } from "./components/index";
 import {
   Dashboard,
   Login,
@@ -16,7 +16,7 @@ const App = () => {
       <Router>
         <Header />
         <div className="flex">
-          <MySidebar />
+          <Sidebar />
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="login" element={<Login />} />

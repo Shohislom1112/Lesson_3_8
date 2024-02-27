@@ -25,56 +25,6 @@ const useTeacher = create<TeacherStoreType>((set) => ({
       }));
     }
   },
-}));
-// addTeachers: async (teachers) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.post('http://localhost:3000/teachers', teachers);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
-
-  // editTodo: async (teachers) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.put(`http://localhost:3000/teachers/${teachers.id}`, teachers);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
-
-  // deleteTodo: async (teachersId) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.delete(`http://localhost:3000/teachers/${teachersId}`);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
+}))
 
 export default useTeacher;
