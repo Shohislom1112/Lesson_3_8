@@ -1,9 +1,10 @@
-import { Sidebar } from "flowbite-react";
+import { Avatar, Sidebar } from "flowbite-react";
 import { VscColorMode } from "react-icons/vsc";
 import { ImUsers } from "react-icons/im";
 
 import { HiChartPie, HiArrowSmLeft } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
+import { student, teacher } from "../assets/images";
 
 function MySidebar() {
   return (
@@ -16,18 +17,19 @@ function MySidebar() {
           <NavLink to="/">
             <Sidebar.Item icon={HiChartPie}>Dashboard</Sidebar.Item>
           </NavLink>
-          <Sidebar.Collapse icon={ImUsers} label="Users">
-            <NavLink to="/teachers">
-              <Sidebar.Item>Teachers</Sidebar.Item>
-            </NavLink>
-            <NavLink to="/students">
-              <Sidebar.Item>Students</Sidebar.Item>
-            </NavLink>
-          </Sidebar.Collapse>
-        </Sidebar.ItemGroup>
 
-        <Sidebar.ItemGroup>
-          <Sidebar.Item icon={VscColorMode}>Theme</Sidebar.Item>
+          <NavLink to="/teachers" >
+            {/* <img src={teacher} alt="" /> */}
+          
+           {/* <Avatar alt="User settings" img={teacher} rounded /> */}
+            <Sidebar.Item>Teachers</Sidebar.Item> 
+        
+          </NavLink>
+          <NavLink to="/students">
+            {/* <img src={student} alt="" /> */}
+            {/* <Avatar alt="User settings" img={student} rounded /> */}
+            <Sidebar.Item>Students</Sidebar.Item>
+          </NavLink>
 
           <NavLink to="/login">
             <Sidebar.Item icon={HiArrowSmLeft}>Logout</Sidebar.Item>

@@ -1,7 +1,9 @@
 const Login = () => {
   return (
     <div>
-      <h1>Login</h1>
+      <input type="text" placeholder="Enter UserName" id="username" className="" />
+      <input type="password" placeholder="Password" id="username" className="" />
+
     </div>
   );
 };

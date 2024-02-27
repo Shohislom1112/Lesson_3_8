@@ -1,21 +1,21 @@
 import { create } from "zustand";
-import { StudentStoreType } from "../types/Student.type";
-import axios from "axios";
+// import { StudentStoreType } from "../types/Student.type";
+import { TeacherStoreType } from "../types/Teacher.types";
 
-const useStudent = create<StudentStoreType>((set) => ({
+const useTeacher = create<TeacherStoreType>((set) => ({
   loading: false,
-  students: [],
+  teachers: [],
   error: null,
-  getStudents: async () => {
+  getTeachers: async () => {
     try {
       set(() => ({
         loading: true,
       }));
-      const res = await axios.get("http://localhost:3000/students");
-      const data = await res.data();
+      const res = await fetch("http://localhost:3000/students");
+      const data = await res.json();
       set(() => ({
         loading: false,
-        students: data,
+        teachers: data,
         error: null,
       }));
     } catch (err: any) {
@@ -25,56 +25,56 @@ const useStudent = create<StudentStoreType>((set) => ({
       }));
     }
   },
-  // addstudents: async (students) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.post('http://localhost:3000/students', students);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
-
-  // editstudents async (students) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.put(`http://localhost:3000/students/${students.id}`, students);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
-
-  // deletestudents: async (studentsId) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.delete(`http://localhost:3000/students/${studentsId}`);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
 }));
+// addTeachers: async (teachers) => {
+  //   set(() => ({
+  //     loading: true,
+  //   }));
+  //   try {
+  //     await axios.post('http://localhost:3000/teachers', teachers);
+  //   } catch (err) {
+  //     set(() => ({
+  //       error: err.message,
+  //     }));
+  //   } finally {
+  //     set(() => ({
+  //       loading: false,
+  //     }));
+  //   }
+  // },
 
-export default useStudent;
+  // editTodo: async (teachers) => {
+  //   set(() => ({
+  //     loading: true,
+  //   }));
+  //   try {
+  //     await axios.put(`http://localhost:3000/teachers/${teachers.id}`, teachers);
+  //   } catch (err) {
+  //     set(() => ({
+  //       error: err.message,
+  //     }));
+  //   } finally {
+  //     set(() => ({
+  //       loading: false,
+  //     }));
+  //   }
+  // },
+
+  // deleteTodo: async (teachersId) => {
+  //   set(() => ({
+  //     loading: true,
+  //   }));
+  //   try {
+  //     await axios.delete(`http://localhost:3000/teachers/${teachersId}`);
+  //   } catch (err) {
+  //     set(() => ({
+  //       error: err.message,
+  //     }));
+  //   } finally {
+  //     set(() => ({
+  //       loading: false,
+  //     }));
+  //   }
+  // },
+
+export default useTeacher;

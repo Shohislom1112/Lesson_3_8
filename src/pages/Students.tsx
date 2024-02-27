@@ -1,41 +1,65 @@
-import { Button, Table } from "flowbite-react";
+import { useEffect} from "react"
+import { Button, ButtonGroup, Table } from "flowbite-react";
+import useStudent from "../app/useStudent";
+
+
 
 const Students = () => {
+  const { loading, students, getStudents
+    // , addStudent, editStudent, deleteStudents
+  } =useStudent()
+  useStudent();
+  useEffect(() => {
+    getStudents();
+  }, 
+  // [change]
+  );
+
+
+
+
+
   return (
     <div className="p-8 ">
       <Table hoverable style={{ width: "1240px" }}>
         <Table.Head>
-          <Table.HeadCell>N/o</Table.HeadCell>
+          <Table.HeadCell>No</Table.HeadCell>
           <Table.HeadCell>Name</Table.HeadCell>
           <Table.HeadCell>Username</Table.HeadCell>
+          <Table.HeadCell>Age</Table.HeadCell>
           <Table.HeadCell>Email</Table.HeadCell>
           <Table.HeadCell>Group</Table.HeadCell>
           <Table.HeadCell className="text-center">Activity</Table.HeadCell>
           <Table.HeadCell className="items-end">
-            {/* <span className="sr-only">Edit</span>
-              <span className="sr-only">Delete</span> */}
+           
           </Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
+          {students.map((st: any) => (
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              1
+              {st.id}
             </Table.Cell>
-            <Table.Cell>Robert Wilson</Table.Cell>
-            <Table.Cell>robert</Table.Cell>
-            <Table.Cell>robert@gmail.com</Table.Cell>
-            <Table.Cell>Frontend</Table.Cell>
+            <Table.Cell>{st.name}</Table.Cell>
+            <Table.Cell>{st.username}</Table.Cell>
+            <Table.Cell>{st.age}</Table.Cell>
+            <Table.Cell>{st.email}</Table.Cell>
+            <Table.Cell>{st.group}</Table.Cell>
             <Table.Cell className="flex gap-3  ">
               <div className="flex flex-wrap gap-2">
-                <Button outline color="warning">
+               <ButtonGroup>
+               <Button   outline color="warning">
                   Edit
                 </Button>
                 <Button outline color="failure">
                   Delete
                 </Button>
+               </ButtonGroup>
               </div>
             </Table.Cell>
           </Table.Row>
+          ))}
+
         </Table.Body>
       </Table>
     </div>
