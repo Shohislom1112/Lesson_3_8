@@ -1,10 +1,10 @@
-import { Avatar, Sidebar } from "flowbite-react";
-import { VscColorMode } from "react-icons/vsc";
-import { ImUsers } from "react-icons/im";
+import {  Sidebar } from "flowbite-react";
+// import { VscColorMode } from "react-icons/vsc";
+// import { ImUsers } from "react-icons/im";
 
 import { HiChartPie, HiArrowSmLeft } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
-import { student, teacher } from "../assets/images";
+// import { student, teacher } from "../assets/images";
 
 function MySidebar() {
   return (
