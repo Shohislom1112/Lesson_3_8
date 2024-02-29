@@ -1,6 +1,5 @@
-import { create } from "zustand";
-import { StudentStoreType } from "../types/Student.type";
-import axios from "axios";
+import { create } from 'zustand';
+import { StudentStoreType } from '../types/Student.type';
 
 const useStudent = create<StudentStoreType>((set) => ({
   loading: false,
@@ -11,8 +10,8 @@ const useStudent = create<StudentStoreType>((set) => ({
       set(() => ({
         loading: true,
       }));
-      const res = await axios.get("http://localhost:3000/students");
-      const data = await res.data();
+      const res = await fetch('http://localhost:3000/students');
+      const data = await res.json();
       set(() => ({
         loading: false,
         students: data,
@@ -25,56 +24,6 @@ const useStudent = create<StudentStoreType>((set) => ({
       }));
     }
   },
-  // addstudents: async (students) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.post('http://localhost:3000/students', students);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
-
-  // editstudents async (students) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.put(`http://localhost:3000/students/${students.id}`, students);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
-
-  // deletestudents: async (studentsId) => {
-  //   set(() => ({
-  //     loading: true,
-  //   }));
-  //   try {
-  //     await axios.delete(`http://localhost:3000/students/${studentsId}`);
-  //   } catch (err) {
-  //     set(() => ({
-  //       error: err.message,
-  //     }));
-  //   } finally {
-  //     set(() => ({
-  //       loading: false,
-  //     }));
-  //   }
-  // },
 }));
 
 export default useStudent;

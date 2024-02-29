@@ -1,52 +1,53 @@
-import { Avatar, Dropdown, Navbar } from "flowbite-react";
-import { MainLogo,  tom } from "../assets/images/index";
-import { NavLink } from "react-router-dom";
+import { Avatar, Button, Dropdown, Navbar } from "flowbite-react";
+import { Nav } from "react-bootstrap";
+// import { CgProfile } from 'react-icons/cg';
+import { Link, NavLink } from 'react-router-dom';
 
+const Header = ({user}) => {
+  const isLoggedIn = true;
+  const avatarUrl =
+    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
 
-function Header() {
   return (
-    <Navbar fluid className="bg-gray-100">
-      <Navbar.Brand>
-        <img src={MainLogo} className="mr-3 h-6 sm:h-9" alt="Logo" />
-        {/* <span className="self-center whitespace-nowrap text-3xl font-semibold dark:text-white"> */}
-          {/* Admin Panel
-        </span> */}
-      </Navbar.Brand>
-      <div className="flex items-center md:order-2">
-        <span className="block text-2xl mr-2">Tom Holand</span>
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label={
-            <Avatar
-              alt="User settings"
-              img={tom}
-              rounded
-            />
-          }
-        >
-          <Dropdown.Header>
-            <span className="block truncate text-sm font-medium">
-              Email: tomholand@gmail.com
-            </span>
-            <span className="block truncate text-sm font-medium">
-              Password: ******
-            </span>
-          </Dropdown.Header>
-          <NavLink to="/profile">
-            <Dropdown.Item>Profile</Dropdown.Item>
-          </NavLink>
+    <div className="w-full">
+      <Navbar className="bg-gray-100">
+        <div className="w-full flex justify-end">
+        {user ? (
+              <Nav.Link>
+                <NavLink to="/profile"><div className="loginn">
+                {user.name}
+                </div></NavLink>
+              </Nav.Link>
+            ) : (
+              <Nav.Link>
+                <NavLink  to="/login"><div >
+                <img src={avatarUrl} alt="" />
+                  <p className="">Выйти</p>
+                </div></NavLink>
+              </Nav.Link>
+            )}
 
-          <Dropdown.Divider />
-          <NavLink to="/login">
-            <Dropdown.Item>Log In</Dropdown.Item>
-          </NavLink>
-        </Dropdown>
-      </div>
-    </Navbar>
+          {/* {isLoggedIn ? (
+            <Dropdown
+              arrowIcon={false}
+              inline
+              label={<Avatar alt="User settings" img={avatarUrl} rounded />}
+            >
+              <Dropdown.Item>Profile</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item>Sign out</Dropdown.Item>
+            </Dropdown>
+          ) : (
+            <Link to="login">
+              <Button gradientDuoTone="purpleToBlue" outline>
+                Login
+              </Button>
+            </Link>
+          )} */}
+        </div>
+      </Navbar>
+    </div>
   );
-}
+};
 
 export default Header;
-
-// Sign in or image in 1:17:07

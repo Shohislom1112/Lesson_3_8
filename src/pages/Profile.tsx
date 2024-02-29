@@ -1,14 +1,5 @@
 const Profile = () => {
-  return (
-    <div>
-      <h1>
-        userName: Ravshanov Shohislom
-      </h1>
-      <h2>
-        Password: **********
-      </h2>
-    </div>
-  );
+  return <div>Profile</div>;
 };
 
 export default Profile;

@@ -1,16 +1,16 @@
 export type TeacherType = {
-    id: string;
+    id: number;
     name: string;
-    username: string;
+    age: number;
     email: string;
     level: string;
-    age: number
   };
   
-  export type TeacherStoreType = {
+  export type StudentStoreType = {
     loading: boolean;
     teachers: TeacherType[];
     error: any;
     getTeachers: () => void;
   };
+  
   

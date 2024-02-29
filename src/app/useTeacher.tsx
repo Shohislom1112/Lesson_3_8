@@ -1,6 +1,5 @@
-import { create } from "zustand";
-// import { StudentStoreType } from "../types/Student.type";
-import { TeacherStoreType } from "../types/Teacher.types";
+import { create } from 'zustand';
+import { TeacherStoreType } from '../types/Teacher.type';
 
 const useTeacher = create<TeacherStoreType>((set) => ({
   loading: false,
@@ -11,7 +10,7 @@ const useTeacher = create<TeacherStoreType>((set) => ({
       set(() => ({
         loading: true,
       }));
-      const res = await fetch("http://localhost:3000/students");
+      const res = await fetch('http://localhost:3000/teachers');
       const data = await res.json();
       set(() => ({
         loading: false,
@@ -25,6 +24,6 @@ const useTeacher = create<TeacherStoreType>((set) => ({
       }));
     }
   },
-}))
+}));
 
 export default useTeacher;

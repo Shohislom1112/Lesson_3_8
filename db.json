@@ -1,206 +1,153 @@
 {
-  "students":[
-    {
-      "name": "Alex Walter",
-      "email": "Paolo_Pacocha@gmail.com",
-      "id": "1"
-      ,
-      "group": "Frontend"
-
-    },
-    {
-      "name": "Grady McDermott",
-      "email": "Annamae_OReilly45@yahoo.com",
-      "id": "2",
-      "group": "Beckent"
-    },
-    {
-      "name": "Kyle Kub III",
-      "email": "Adrienne_Schiller46@yahoo.com",
-      "id": "3",
-      "group": "Beckent"
-    },
-    {
-      "name": "Miss Louis Goyette",
-      "email": "Delaney3@gmail.com",
-      "id": "4",
-      "group": "Frontend"
-    },
-    {
-      "name": "Abraham Dibbert",
-      "email": "Emiliano_Hudson36@gmail.com",
-      "id": "5",
-      "group": "Beckent"
-    },
-    {
-      "name": "Vanessa Kertzmann",
-      "email": "Adolph.Blick@yahoo.com",
-      "id": "6",
-      "group": "Frontend"
-    },
-    {
-      "name": "Alexandra Bosco",
-      "email": "Sonya.OReilly@yahoo.com",
-      "id": "7",
-      "group": "Beckent"
-    },
-    {
-      "name": "Mabel Franecki",
-      "email": "Sabrina_Ortiz62@gmail.com",
-      "id": "8"
-    },
-    {
-      "name": "Tasha Pacocha",
-      "email": "Maxine.Hamill@hotmail.com",
-      "id": "9",
-      "group": "Beckent"
-    },
+  "students": [
     {
       "name": "Amanda Fritsch Jr.",
       "email": "Sydnee_McLaughlin@hotmail.com",
       "id": "10",
-      "group": "Frontend"
+      "group": "Frontend",
+      "age": 25
     },
     {
       "name": "Lindsey Rippin II",
       "email": "Mariane_Cummerata71@gmail.com",
       "id": "11",
-      "group": "Beckent"
+      "group": "Beckent",
+      "age": 25
     },
     {
       "name": "Gloria VonRueden",
       "email": "Ila.Pfannerstill@gmail.com",
       "id": "12",
-      "group": "Frontend"
+      "group": "Frontend",
+      "age": 25
     },
     {
       "name": "Elsie Emmerich",
       "email": "Mae.Medhurst33@yahoo.com",
       "id": "13",
-      "group": "Beckent"
+      "group": "Beckent",
+      "age": 25
     },
     {
       "name": "Tabitha Ferry I",
       "email": "River_Huel14@yahoo.com",
       "id": "14",
-      "group": "Frontend"
+      "group": "Frontend",
+      "age": 25
     },
     {
       "name": "Ms. Billy Botsford III",
       "email": "Kiera_Douglas@gmail.com",
       "group": "Frontend",
-      "id": "15"
+      "id": "15",
+      "age": 25
     }
-  ]
-
-  ,
+  ],
   "teachers": [
-    [
-      {
-        "name": "Percy Reichert II",
-        "email": "Josue.Wyman58@yahoo.com",
-        "id": "1",
-        "age": 25,
-        "level":"Juniyor"
-      },
-      {
-        "name": "Tricia Harvey",
-        "email": "Jack22@yahoo.com",
-        "id": "2",
-        "age":12,
-        "level":"Middle"
-      },
-      {
-        "name": "Wilma Witting",
-        "email": "Clemens.McCullough@gmail.com",
-        "id": "3",
-        "age": 25,
-        "level":"Senior"
-      },
-      {
-        "name": "Jeremy Boyer PhD",
-        "email": "Gregg_Walker@yahoo.com",
-        "id": "4",
-        "age":12,
-        "level":"Juniyor"
-      },
-      {
-        "name": "Jessie Waelchi",
-        "email": "Ron.Volkman63@hotmail.com",
-        "id": "5",
-        "age": 25,
-        "level":"Middle"
-      },
-      {
-        "name": "Lola Luettgen",
-        "email": "Milan.Stroman36@gmail.com",
-        "id": "6",
-        "age":12,
-        "level":"Senior"
-      },
-      {
-        "name": "Lori Bruen",
-        "email": "Ruben.Rath20@gmail.com",
-        "id": "7",
-        "age": 25,
-        "level":"Juniyor"
-      },
-      {
-        "name": "Van Kohler",
-        "email": "Jason_Skiles@hotmail.com",
-        "id": "8",
-        "age":12,
-        "level":"Middle"
-      },
-      {
-        "name": "Rose Harber",
-        "email": "Daren_Lemke@gmail.com",
-        "id": "9",
-        "age": 25,
-        "level":"Senior"
-      },
-      {
-        "name": "Dora Stoltenberg",
-        "email": "Oliver.Boyer@gmail.com",
-        "id": "10",
-        "age":12,
-        "level":"Juniyor"
-      },
-      {
-        "name": "Edmund Veum",
-        "email": "Hudson_Zieme0@yahoo.com",
-        "id": "11",
-        "age": 25,
-        "level":"Middle"
-      },
-      {
-        "name": "Mr. Nichole Connelly",
-        "email": "Jaqueline_Wilderman@yahoo.com",
-        "id": "12",
-        "age":12,
-        "level":"Senior"
-      },
-      {
-        "name": "Cecelia Tillman",
-        "email": "Reynold_Quigley9@yahoo.com",
-        "id": "13",
-        "age": 25,
-        "level":"Juniyor"
-      },
-      {
-        "name": "Mrs. Arthur Lueilwitz",
-        "email": "Greta_Harris@yahoo.com",
-        "id": "14",
-        "age":12,
-        "level":"Middle"
-      },
-      {
-        "name": "Patti Armstrong I",
-        "email": "Hobart65@hotmail.com",
-        "id": "15",
-        "age": 25,
-        "level":"Senior"
-      }
-    ]
+    {
+      "name": "Percy Reichert II",
+      "age": 25,
+      "email": "Josue.Wyman58@yahoo.com",
+      "level": "Juniyor",
+      "id": "1"
+    },
+    {
+      "name": "Tricia Harvey",
+      "email": "Jack22@yahoo.com",
+      "id": "2",
+      "age": 12,
+      "level": "Middle"
+    },
+    {
+      "name": "Wilma Witting",
+      "email": "Clemens.McCullough@gmail.com",
+      "id": "3",
+      "age": 25,
+      "level": "Senior"
+    },
+    {
+      "name": "Jeremy Boyer PhD",
+      "email": "Gregg_Walker@yahoo.com",
+      "id": "4",
+      "age": 12,
+      "level": "Juniyor"
+    },
+    {
+      "name": "Jessie Waelchi",
+      "email": "Ron.Volkman63@hotmail.com",
+      "id": "5",
+      "age": 25,
+      "level": "Middle"
+    },
+    {
+      "name": "Lola Luettgen",
+      "email": "Milan.Stroman36@gmail.com",
+      "id": "6",
+      "age": 12,
+      "level": "Senior"
+    },
+    {
+      "name": "Lori Bruen",
+      "email": "Ruben.Rath20@gmail.com",
+      "id": "7",
+      "age": 25,
+      "level": "Juniyor"
+    },
+    {
+      "name": "Van Kohler",
+      "email": "Jason_Skiles@hotmail.com",
+      "id": "8",
+      "age": 12,
+      "level": "Middle"
+    },
+    {
+      "name": "Rose Harber",
+      "email": "Daren_Lemke@gmail.com",
+      "id": "9",
+      "age": 25,
+      "level": "Senior"
+    },
+    {
+      "name": "Dora Stoltenberg",
+      "email": "Oliver.Boyer@gmail.com",
+      "id": "10",
+      "age": 12,
+      "level": "Juniyor"
+    },
+    {
+      "name": "Edmund Veum",
+      "email": "Hudson_Zieme0@yahoo.com",
+      "id": "11",
+      "age": 25,
+      "level": "Middle"
+    },
+    {
+      "name": "Mr. Nichole Connelly",
+      "email": "Jaqueline_Wilderman@yahoo.com",
+      "id": "12",
+      "age": 12,
+      "level": "Senior"
+    },
+    {
+      "name": "Cecelia Tillman",
+      "email": "Reynold_Quigley9@yahoo.com",
+      "id": "13",
+      "age": 25,
+      "level": "Juniyor"
+    },
+    {
+      "name": "Mrs. Arthur Lueilwitz",
+      "email": "Greta_Harris@yahoo.com",
+      "id": "14",
+      "age": 12,
+      "level": "Middle"
+    },
+    {
+      "name": "Patti Armstrong I",
+      "email": "Hobart65@hotmail.com",
+      "id": "15",
+      "age": 25,
+      "level": "Senior"
+    }
   ]
 }

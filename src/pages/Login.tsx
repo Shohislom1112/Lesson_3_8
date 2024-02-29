@@ -1,11 +1,5 @@
 const Login = () => {
-  return (
-    <div>
-      <input type="text" placeholder="Enter UserName" id="username" className="" />
-      <input type="password" placeholder="Password" id="username" className="" />
-
-    </div>
-  );
+  return <div>Login</div>;
 };
 
 export default Login;
