@@ -13,7 +13,7 @@ const Teachers: React.FC = () => {
     null
   );
   const [editedName, setEditedName] = useState<string>("");
-  const [editedAge, setEditedAge] = useState<number | null>(null);
+  const [editedAge, setEditedAge] = useState<number | string>("");
   const [editedEmail, setEditedEmail] = useState<string>("");
   const [editedLevel, setEditedLevel] = useState<string>("");
 

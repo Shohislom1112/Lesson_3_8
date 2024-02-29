@@ -8,7 +8,7 @@ type StudentFormType = {
   initialValues: StudentInfo;
   validate: (values: StudentInfo) => {
     name: string;
-    age: string;
+    age: number | string;
     email: string;
   };
   onSubmit: (value: StudentInfo) => void;
@@ -41,7 +41,7 @@ const AddStudents = () => {
         errors.email = 'Invalid email format';
       }
       if (values.age === '') {
-        errors.age = 'Age is required';
+        errors.age = 'Username is required';
       }
       return errors;
     },
@@ -108,7 +108,7 @@ const AddStudents = () => {
           )}
         </div>
         <div>
-          <label htmlFor="age">Age:</label>
+          <label htmlFor="age">Username:</label>
           <TextInput
             type="text"
             id="age"
@@ -143,9 +143,9 @@ const AddStudents = () => {
             value={formik.values.group}
             onChange={formik.handleChange}
           >
-            <option value="Frontend">Frontend</option>
-            <option value="Beckent">Beckent</option>
-            
+            <option value="React N32">React N32</option>
+            <option value="React N25">React N25</option>
+            <option value="React N2">React N2</option>
           </Select>
         </div>
         <Button type="submit">Add Student</Button>

@@ -15,9 +15,13 @@ import { useState } from "react";
 
 
 
-
 const App = () => {
-  const storedUserData = localStorage.getItem("user"); const [user, setUser] = useState<User | JSX.Element>( storedUserData ? JSON.parse(storedUserData) : <Navigate to="/login" replace/> );
+  type User = any
+  const storedUserData = localStorage.getItem("user");
+  const [user, setUser] = useState<User | JSX.Element>(
+    storedUserData ? JSON.parse(storedUserData) : <Navigate to="/login" replace />
+  );
+
   return (
     <Router>
       <div className="flex w-full min-h-screen">
@@ -29,10 +33,10 @@ const App = () => {
             <Route path="students" element={<Students />} />
             <Route path="teachers" element={<Teachers />} />
             <Route path="register" element={<Register />} />
-            <Route path="login" element={<Login />} />
+            <Route path="login" element={<Login setUser={setUser} />} />
             <Route path="addstudent" element={<AddStudents />} />
             {/* <Route path="editstudents" element={<EditStudents />} /> */}
-            <Route path="profile" element={<Profile />} />
+            <Route path="profile" element={<Profile user={user} setUser={setUser} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
@@ -40,5 +44,6 @@ const App = () => {
     </Router>
   );
 };
+
 
 export default App;

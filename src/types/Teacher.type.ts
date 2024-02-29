@@ -1,12 +1,12 @@
 export type TeacherType = {
-    id: number;
+id: number;
     name: string;
     age: number;
     email: string;
     level: string;
   };
   
-  export type StudentStoreType = {
+  export type TeacherStoreType = {
     loading: boolean;
     teachers: TeacherType[];
     error: any;
